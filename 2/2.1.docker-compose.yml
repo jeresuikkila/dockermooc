@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  file:
+    image: alpine
+    volumes:
+      - ./2.1:/src
+    entrypoint: touch /src/logs.txt
+
+  app:
+    image: devopsdockeruh/first_volume_exercise
+    volumes:
+      - ./2.1/logs.txt:/usr/app/logs.txt
+    depends_on:
+      - file
