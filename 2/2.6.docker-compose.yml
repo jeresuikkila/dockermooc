@@ -1,10 +1,10 @@
 version: "3.7"
 services:
-  front:
+  frontend:
     build: ../1/frontend-example-docker
     ports:
       - "5000:5000"
-  back:
+  backend:
     build: ../1/backend-example-docker
     ports:
       - "8000:8000"
